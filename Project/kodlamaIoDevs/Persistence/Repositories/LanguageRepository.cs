@@ -14,6 +14,6 @@ namespace Persistence.Repositories
     {
         public LanguageRepository(BaseDbContext context) : base(context)
         {
-        }
+        } 
     }
 }

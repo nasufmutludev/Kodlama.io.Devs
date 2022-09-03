@@ -10,5 +10,5 @@ namespace Application.Services
 {
     public interface ILanguageRepository:IAsyncRepository<Language>,IRepository<Language>
     {
-    }
+    } 
 }

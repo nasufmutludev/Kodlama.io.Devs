@@ -26,7 +26,7 @@ namespace Persistence.Contexts
             //    base.OnConfiguring(
             //        optionsBuilder.UseSqlServer(Configuration.GetConnectionString("SomeConnectionString")));
         }
-
+         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Language>(a =>
