@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using Core.Persistence.Repositories;
 using Domain.Entities;
 
-namespace Application.Services
+namespace Application.Services.Repositories
 {
-    public interface ILanguageRepository:IAsyncRepository<Language>,IRepository<Language>
+    public interface ILanguageRepository : IAsyncRepository<Language>, IRepository<Language>
     {
-    } 
+    }
 }
