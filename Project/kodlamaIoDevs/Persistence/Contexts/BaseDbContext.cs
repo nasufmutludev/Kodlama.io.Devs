@@ -20,12 +20,12 @@ namespace Persistence.Contexts
             Configuration = configuration;
         }
 
-        //protected override void OnConfigure(DbContextOptionsBuilder optionsBuilder)
-        //{
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
             //if (!optionsBuilder.IsConfigured)
             //    base.OnConfiguring(
             //        optionsBuilder.UseSqlServer(Configuration.GetConnectionString("SomeConnectionString")));
-        //}
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

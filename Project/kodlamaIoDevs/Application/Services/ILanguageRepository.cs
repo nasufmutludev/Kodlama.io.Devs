@@ -8,7 +8,7 @@ using Domain.Entities;
 
 namespace Application.Services
 {
-    internal interface ILanguagesRepository:IAsyncRepository<Language>,IRepository<Language>
+    public interface ILanguageRepository:IAsyncRepository<Language>,IRepository<Language>
     {
     }
 }
