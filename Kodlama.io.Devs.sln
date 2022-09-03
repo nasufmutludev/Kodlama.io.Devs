@@ -5,19 +5,31 @@ VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "corePackages", "corePackages", "{E9520306-86F7-4A92-A3E5-EB32D952FA32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Application", "corePackages\Core.Application\Core.Application.csproj", "{E61293B8-8DFE-4393-9AD3-3BA5D8F15FC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.Application", "corePackages\Core.Application\Core.Application.csproj", "{E61293B8-8DFE-4393-9AD3-3BA5D8F15FC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.CrossCuttingConcers", "corePackages\Core.CrossCuttingConcers\Core.CrossCuttingConcers.csproj", "{09AF7AFC-A7B2-4AA7-AAF0-EAF91464CF45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.CrossCuttingConcers", "corePackages\Core.CrossCuttingConcers\Core.CrossCuttingConcers.csproj", "{09AF7AFC-A7B2-4AA7-AAF0-EAF91464CF45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.ElasticSearch", "corePackages\Core.ElasticSearch\Core.ElasticSearch.csproj", "{79FCB0BB-688C-4EED-B404-FB586BA346F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.ElasticSearch", "corePackages\Core.ElasticSearch\Core.ElasticSearch.csproj", "{79FCB0BB-688C-4EED-B404-FB586BA346F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Mailing", "corePackages\Core.Mailing\Core.Mailing.csproj", "{DB5ECAB1-3CDF-4802-8232-0933F15BADAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.Mailing", "corePackages\Core.Mailing\Core.Mailing.csproj", "{DB5ECAB1-3CDF-4802-8232-0933F15BADAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Persistence", "corePackages\Core.Persistence\Core.Persistence.csproj", "{0C8AC084-A0CE-4748-99F2-2B0ACD2FDE43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.Persistence", "corePackages\Core.Persistence\Core.Persistence.csproj", "{0C8AC084-A0CE-4748-99F2-2B0ACD2FDE43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Security", "corePackages\Core.Security\Core.Security.csproj", "{CD8F42C7-C2B4-4A88-B951-930CCFAF1425}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.Security", "corePackages\Core.Security\Core.Security.csproj", "{CD8F42C7-C2B4-4A88-B951-930CCFAF1425}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{2005B6EE-7EBD-4243-8ECE-C22E8CA352B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "kodlamaIoDevs", "kodlamaIoDevs", "{93DBCD39-7335-4CF6-B739-9CC2D51B521D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Project\kodlamaIoDevs\Application\Application.csproj", "{2D378820-1976-4FF3-AD1A-8BA161EE67D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Project\kodlamaIoDevs\Domain\Domain.csproj", "{D06DCFBC-CA9D-4E33-A488-A94890AB4DEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Project\kodlamaIoDevs\Infrastructure\Infrastructure.csproj", "{875CBB54-6520-4A26-9F10-13E1FF11C8D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Project\kodlamaIoDevs\Persistence\Persistence.csproj", "{2D4F48B6-84B8-4A1E-A187-532D90847600}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "Project\kodlamaIoDevs\WebAPI\WebAPI.csproj", "{EEFA60FF-7C66-4447-AE09-39FE9428AD2E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +61,26 @@ Global
 		{CD8F42C7-C2B4-4A88-B951-930CCFAF1425}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD8F42C7-C2B4-4A88-B951-930CCFAF1425}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD8F42C7-C2B4-4A88-B951-930CCFAF1425}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D378820-1976-4FF3-AD1A-8BA161EE67D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D378820-1976-4FF3-AD1A-8BA161EE67D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D378820-1976-4FF3-AD1A-8BA161EE67D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D378820-1976-4FF3-AD1A-8BA161EE67D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D06DCFBC-CA9D-4E33-A488-A94890AB4DEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D06DCFBC-CA9D-4E33-A488-A94890AB4DEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D06DCFBC-CA9D-4E33-A488-A94890AB4DEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D06DCFBC-CA9D-4E33-A488-A94890AB4DEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{875CBB54-6520-4A26-9F10-13E1FF11C8D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{875CBB54-6520-4A26-9F10-13E1FF11C8D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{875CBB54-6520-4A26-9F10-13E1FF11C8D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{875CBB54-6520-4A26-9F10-13E1FF11C8D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D4F48B6-84B8-4A1E-A187-532D90847600}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D4F48B6-84B8-4A1E-A187-532D90847600}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D4F48B6-84B8-4A1E-A187-532D90847600}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D4F48B6-84B8-4A1E-A187-532D90847600}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEFA60FF-7C66-4447-AE09-39FE9428AD2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEFA60FF-7C66-4447-AE09-39FE9428AD2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEFA60FF-7C66-4447-AE09-39FE9428AD2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEFA60FF-7C66-4447-AE09-39FE9428AD2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +92,12 @@ Global
 		{DB5ECAB1-3CDF-4802-8232-0933F15BADAE} = {E9520306-86F7-4A92-A3E5-EB32D952FA32}
 		{0C8AC084-A0CE-4748-99F2-2B0ACD2FDE43} = {E9520306-86F7-4A92-A3E5-EB32D952FA32}
 		{CD8F42C7-C2B4-4A88-B951-930CCFAF1425} = {E9520306-86F7-4A92-A3E5-EB32D952FA32}
+		{93DBCD39-7335-4CF6-B739-9CC2D51B521D} = {2005B6EE-7EBD-4243-8ECE-C22E8CA352B0}
+		{2D378820-1976-4FF3-AD1A-8BA161EE67D6} = {93DBCD39-7335-4CF6-B739-9CC2D51B521D}
+		{D06DCFBC-CA9D-4E33-A488-A94890AB4DEE} = {93DBCD39-7335-4CF6-B739-9CC2D51B521D}
+		{875CBB54-6520-4A26-9F10-13E1FF11C8D9} = {93DBCD39-7335-4CF6-B739-9CC2D51B521D}
+		{2D4F48B6-84B8-4A1E-A187-532D90847600} = {93DBCD39-7335-4CF6-B739-9CC2D51B521D}
+		{EEFA60FF-7C66-4447-AE09-39FE9428AD2E} = {93DBCD39-7335-4CF6-B739-9CC2D51B521D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {85E0BC1A-1897-4E16-99A5-055FE8E6BEDC}
