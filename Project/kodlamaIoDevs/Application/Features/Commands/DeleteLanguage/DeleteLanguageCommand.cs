@@ -32,6 +32,8 @@ namespace Application.Features.Commands.DeleteLanguage
             public async Task<DeleteLanguageDto> Handle(DeleteLanguageCommand request, CancellationToken cancellationToken)
             {
                 Language mappedLanguage = _mapper.Map<Language>(request);
+                Language language = await _languageRepository.GetAsync(x => x.Id == request.Id);
+                _languageBusinessRules.LanguageShouldExistWhenRequested(language);
                 Language deleteLanguage = await _languageRepository.DeleteAsync(mappedLanguage);
                 DeleteLanguageDto deleteLanguageDto = _mapper.Map<DeleteLanguageDto>(deleteLanguage);
                 return deleteLanguageDto;
