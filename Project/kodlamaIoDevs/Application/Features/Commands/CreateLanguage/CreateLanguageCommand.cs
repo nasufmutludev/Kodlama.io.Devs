@@ -10,13 +10,13 @@ using AutoMapper;
 using Domain.Entities;
 using MediatR;
 
-namespace Application.Features.Commands
+namespace Application.Features.Commands.CreateLanguage
 {
-    public partial class CreateLanguageCommand:IRequest<CreatedLanguageDto>
+    public partial class CreateLanguageCommand : IRequest<CreatedLanguageDto>
     {
         public string Name { get; set; }
 
-        public class CreateLanguageCommandHandler:IRequestHandler<CreateLanguageCommand,CreatedLanguageDto>
+        public class CreateLanguageCommandHandler : IRequestHandler<CreateLanguageCommand, CreatedLanguageDto>
         {
             private readonly ILanguageRepository _languageRepository;
             private readonly IMapper _mapper;
