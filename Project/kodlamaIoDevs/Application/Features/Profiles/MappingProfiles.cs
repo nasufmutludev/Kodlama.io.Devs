@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Application.Features.Commands;
 using Application.Features.Dtos;
+using Application.Features.Models;
+using Core.Persistence.Paging;
 using Domain.Entities;
 
 namespace Application.Features.Profiles
@@ -16,6 +18,8 @@ namespace Application.Features.Profiles
         {
             CreateMap<Language, CreatedLanguageDto>().ReverseMap();
             CreateMap<Language, CreateLanguageCommand>().ReverseMap();
+            CreateMap<Language, LanguageListDto>().ReverseMap();
+            CreateMap<IPaginate<Language>, LanguageListModel>().ReverseMap();
         }
     }
 }

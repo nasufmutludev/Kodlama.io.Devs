@@ -8,8 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Features\Constants\" />
-    <Folder Include="Features\Models\" />
-    <Folder Include="Features\Queries\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\corePackages\Core.Application\Core.Application.csproj" />
     <ProjectReference Include="..\..\..\corePackages\Core.CrossCuttingConcers\Core.CrossCuttingConcers.csproj" />
     <ProjectReference Include="..\..\..\corePackages\Core.Persistence\Core.Persistence.csproj" />
     <ProjectReference Include="..\Domain\Domain.csproj" />
