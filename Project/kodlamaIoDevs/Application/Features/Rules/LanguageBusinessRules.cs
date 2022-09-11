@@ -21,8 +21,14 @@ namespace Application.Features.Rules
 
         public async Task LanguageCanNotBeDuplicatedWhenInserted(string name)
         {
-            IPaginate<Language> result = await _languageRepository.GetListAsync(b => b.Name == name);
+            IPaginate<Language> result = await _languageRepository.GetListAsync(x => x.Name == name);
             if (result.Items.Any()) throw new BusinessException("Language name exists.");
+        }
+
+        public async Task LanguageShouldExistWhenRequested(int id)
+        {
+            Language language = await _languageRepository.GetAsync(x => x.Id == id);
+            if (language == null) throw new BusinessException("Requested language does not exists.");
         }
     }
 }

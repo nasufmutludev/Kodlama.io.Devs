@@ -11,7 +11,7 @@ using Core.Persistence.Paging;
 using Domain.Entities;
 using MediatR;
 
-namespace Application.Features.Queries.GetListBrand
+namespace Application.Features.Queries.GetListLanguage
 {
     public class GetListLanguageQuery:IRequest<LanguageListModel>
     {
