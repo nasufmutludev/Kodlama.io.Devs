@@ -1,7 +1,8 @@
 ﻿using Application.Features.Commands.CreateLanguage;
 using Application.Features.Dtos;
 using Application.Features.Models;
-using Application.Features.Queries.GetListBrand;
+using Application.Features.Queries.GetByIdLanguage;
+using Application.Features.Queries.GetListLanguage;
 using Core.Application.Requests;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -27,6 +28,13 @@ namespace WebAPI.Controllers
             GetListLanguageQuery getListLanguageQuery = new() { PageRequest = pageRequest };
             LanguageListModel result = await Mediator.Send(getListLanguageQuery);
             return Ok(result);
+        }
+
+        [HttpGet("{Id}")]
+        public async Task<IActionResult> GetById([FromRoute] GetByIdLanguageQuery getByIdLanguageQuery)
+        {
+            GetByIdLanguageDto getByIdLanguageDto = await Mediator.Send(getByIdLanguageQuery);
+            return Ok(getByIdLanguageDto);
         }
     }
 }

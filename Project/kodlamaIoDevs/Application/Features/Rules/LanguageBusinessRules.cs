@@ -25,9 +25,8 @@ namespace Application.Features.Rules
             if (result.Items.Any()) throw new BusinessException("Language name exists.");
         }
 
-        public async Task LanguageShouldExistWhenRequested(int id)
+        public void LanguageShouldExistWhenRequested(Language language)
         {
-            Language language = await _languageRepository.GetAsync(x => x.Id == id);
             if (language == null) throw new BusinessException("Requested language does not exists.");
         }
     }

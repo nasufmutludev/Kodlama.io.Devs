@@ -31,7 +31,6 @@ namespace Application.Features.Queries.GetListLanguage
             {
                 IPaginate<Language> language = await _languageRepository.GetListAsync(index: request.PageRequest.Page, size: request.PageRequest.PageSize);
                 LanguageListModel mappedLanguageListModel = _mapper.Map<LanguageListModel>(language);
-
                 return mappedLanguageListModel;
             }
         }
