@@ -1,4 +1,5 @@
 ﻿using Application.Features.Commands.CreateLanguage;
+using Application.Features.Commands.DeleteLanguage;
 using Application.Features.Commands.UpdateLanguage;
 using Application.Features.Dtos;
 using Application.Features.Models;
@@ -39,10 +40,17 @@ namespace WebAPI.Controllers
         }
 
 
-        [HttpPut("update")]
+        [HttpPut("Update")]
         public async Task<IActionResult> Update([FromBody] UpdateLanguageCommand updateLanguageCommand)
         {
             UpdateLanguageDto result = await Mediator.Send(updateLanguageCommand);
+            return Created("", result);
+        }
+
+        [HttpDelete("Delete/{Id}")]
+        public async Task<IActionResult> Delete([FromRoute] DeleteLanguageCommand deleteLanguageCommand)
+        {
+            DeleteLanguageDto result = await Mediator.Send(deleteLanguageCommand);
             return Created("", result);
         }
     }

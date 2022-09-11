@@ -9,6 +9,7 @@ using Application.Features.Models;
 using Core.Persistence.Paging;
 using Domain.Entities;
 using Application.Features.Commands.CreateLanguage;
+using Application.Features.Commands.DeleteLanguage;
 using Application.Features.Commands.UpdateLanguage;
 
 namespace Application.Features.Profiles
@@ -23,6 +24,8 @@ namespace Application.Features.Profiles
             CreateMap<Language, GetByIdLanguageDto>().ReverseMap();
             CreateMap<Language, UpdateLanguageDto>().ReverseMap();
             CreateMap<Language, UpdateLanguageCommand>().ReverseMap();
+            CreateMap<Language, DeleteLanguageDto>().ReverseMap();
+            CreateMap<Language, DeleteLanguageCommand>().ReverseMap();
             CreateMap<IPaginate<Language>, LanguageListModel>().ReverseMap();
         }
     }
