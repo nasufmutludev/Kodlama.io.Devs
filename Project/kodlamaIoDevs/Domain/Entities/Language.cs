@@ -10,7 +10,7 @@ namespace Domain.Entities
     public class Language : Entity
     {
         public string Name { get; set; }
-        public virtual ICollection<Language> Languages { get; set; }
+        public virtual ICollection<LanguageTecnology> LanguageTecnologies { get; set; }
 
         public Language()
         {

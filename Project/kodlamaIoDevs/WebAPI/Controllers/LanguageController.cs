@@ -1,10 +1,10 @@
-﻿using Application.Features.Commands.CreateLanguage;
-using Application.Features.Commands.DeleteLanguage;
-using Application.Features.Commands.UpdateLanguage;
-using Application.Features.Dtos;
-using Application.Features.Models;
-using Application.Features.Queries.GetByIdLanguage;
-using Application.Features.Queries.GetListLanguage;
+﻿using Application.Features.Languages.Commands.CreateLanguage;
+using Application.Features.Languages.Commands.DeleteLanguage;
+using Application.Features.Languages.Commands.UpdateLanguage;
+using Application.Features.Languages.Dtos;
+using Application.Features.Languages.Models;
+using Application.Features.Languages.Queries.GetByIdLanguage;
+using Application.Features.Languages.Queries.GetListLanguage;
 using Core.Application.Requests;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
