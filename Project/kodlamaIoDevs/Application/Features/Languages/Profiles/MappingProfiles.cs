@@ -4,15 +4,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Application.Features.Dtos;
-using Application.Features.Models;
+using Application.Features.Languages.Commands.CreateLanguage;
+using Application.Features.Languages.Commands.DeleteLanguage;
+using Application.Features.Languages.Commands.UpdateLanguage;
+using Application.Features.Languages.Dtos;
+using Application.Features.Languages.Models;
 using Core.Persistence.Paging;
 using Domain.Entities;
-using Application.Features.Commands.CreateLanguage;
-using Application.Features.Commands.DeleteLanguage;
-using Application.Features.Commands.UpdateLanguage;
 
-namespace Application.Features.Profiles
+
+namespace Application.Features.Languages.Profiles
 {
     public class MappingProfiles : Profile
     {

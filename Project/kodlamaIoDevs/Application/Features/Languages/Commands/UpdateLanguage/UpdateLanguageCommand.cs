@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Application.Features.Dtos;
+using Application.Features.Languages.Dtos;
 using Application.Features.Rules;
 using Application.Services.Repositories;
 using AutoMapper;
 using Domain.Entities;
 using MediatR;
 
-namespace Application.Features.Commands.UpdateLanguage
+namespace Application.Features.Languages.Commands.UpdateLanguage
 {
     public class UpdateLanguageCommand:IRequest<UpdateLanguageDto>
     {

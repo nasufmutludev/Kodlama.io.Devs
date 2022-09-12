@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Features.Dtos
+namespace Application.Features.Languages.Dtos
 {
     public class LanguageListDto
     {

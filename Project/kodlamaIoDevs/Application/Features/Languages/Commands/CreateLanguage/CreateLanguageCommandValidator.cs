@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FluentValidation;
 
-namespace Application.Features.Commands.CreateLanguage
+namespace Application.Features.Languages.Commands.CreateLanguage
 {
     public class CreateLanguageCommandValidator:AbstractValidator<CreateLanguageCommand>
     {

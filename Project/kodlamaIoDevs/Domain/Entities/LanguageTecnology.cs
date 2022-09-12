@@ -7,20 +7,22 @@ using Core.Persistence.Repositories;
 
 namespace Domain.Entities
 {
-    public class Language : Entity
+    public class LanguageTecnology : Entity
     {
+        public int LanguageId { get; set; }
         public string Name { get; set; }
-        public virtual ICollection<Language> Languages { get; set; }
+        public virtual Language? Language { get; set; }
 
-        public Language()
+        public LanguageTecnology()
         {
 
         }
 
-        public Language(int id, string name) : this()
+        public LanguageTecnology(int id, int languageId, string name) : this()
         {
             Id=id;
+            LanguageId=languageId;
             Name=name;
         }
-    } 
+    }
 }
