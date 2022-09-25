@@ -15,7 +15,7 @@ namespace Application.Features.Tecnologies.Commands.UpdateTechnologies
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public int ProgrammingLanguageId { get; set; }
+        public int LanguageId { get; set; }
 
         public class UpdateProgrammingLanguageTechnologyCommandHandler : IRequestHandler<
             UpdateTechnologiesCommand, UpdatedTechnologiesDto>
@@ -35,17 +35,15 @@ namespace Application.Features.Tecnologies.Commands.UpdateTechnologies
             public async Task<UpdatedTechnologiesDto> Handle(UpdateTechnologiesCommand request, CancellationToken cancellationToken)
             {
                 await _technologiesBusinessRules.HasProgrammingLanguageTechnologyWithThisId(request.Id);
-                await _technologiesBusinessRules.HasProgrammingLanguageWithThisIs(request.ProgrammingLanguageId);
-                await _technologiesBusinessRules.NameAlreadyExistBySpecificProgrammingLanguageId(request.ProgrammingLanguageId, request.Name);
+                await _technologiesBusinessRules.HasProgrammingLanguageWithThisIs(request.LanguageId);
+                await _technologiesBusinessRules.NameAlreadyExistBySpecificProgrammingLanguageId(request.LanguageId, request.Name);
 
                 var technologiesEntity = await _technologiesRepository.GetAsync(w => w.Id == request.Id);
                 technologiesEntity.Name = request.Name;
-                technologiesEntity.LanguageId = request.Id;
+                technologiesEntity.LanguageId = request.LanguageId;
 
                 var updatedTechnologiesEntity = await _technologiesRepository.UpdateAsync(technologiesEntity);
-
-                var updatedTechnologiesDto =
-                    _mapper.Map<UpdatedTechnologiesDto>(updatedTechnologiesEntity);
+                var updatedTechnologiesDto = _mapper.Map<UpdatedTechnologiesDto>(updatedTechnologiesEntity);
 
                 return updatedTechnologiesDto;
             }

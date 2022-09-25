@@ -1,5 +1,6 @@
 ﻿using Application.Features.Tecnologies.Commands.CreateTechnologies;
 using Application.Features.Tecnologies.Commands.DeleteTechnologies;
+using Application.Features.Tecnologies.Commands.UpdateTechnologies;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -20,6 +21,13 @@ namespace WebAPI.Controllers
         public async Task<IActionResult> Delete([FromRoute] DeleteTechnologiesCommand deleteTechnologiesCommand)
         {
             var result = await Mediator.Send(deleteTechnologiesCommand);
+            return Ok(result);
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> Update([FromBody] UpdateTechnologiesCommand updateTechnologiesCommand)
+        {
+            var result = await Mediator.Send(updateTechnologiesCommand);
             return Ok(result);
         }
     }

@@ -33,18 +33,13 @@ namespace Application.Features.Tecnologies.Commands.CreateTechnologies
 
             public async Task<CreatedTechnologiesCommandDto> Handle(CreateTechnologiesCommand request, CancellationToken cancellationToken)
             {
-                await _technologyBusinessRules.NameAlreadyExistBySpecificProgrammingLanguageId(
-                    request.LanguageId, request.Name);
-                await _technologyBusinessRules.HasProgrammingLanguageWithThisIs(
-                    request.LanguageId);
+                await _technologyBusinessRules.NameAlreadyExistBySpecificProgrammingLanguageId(request.LanguageId, request.Name);
+                await _technologyBusinessRules.HasProgrammingLanguageWithThisIs(request.LanguageId);
+                var createdTechnologies = _mapper.Map<Domain.Entities.Technologies>(request);
+                var result = await _technologiesRepository.AddAsync(createdTechnologies);
+                var createdTechnologiesDto = _mapper.Map<CreatedTechnologiesCommandDto>(createdTechnologies);
 
-                var createdProgrammingLanguageTechnology =
-                    _mapper.Map<Domain.Entities.Technologies>(request);
-                var result = await _technologiesRepository.AddAsync(createdProgrammingLanguageTechnology);
-                var createdProgrammingLanguageTechnologyDto =
-                    _mapper.Map<CreatedTechnologiesCommandDto>(createdProgrammingLanguageTechnology);
-
-                return createdProgrammingLanguageTechnologyDto;
+                return createdTechnologiesDto;
             }
         }
     }
