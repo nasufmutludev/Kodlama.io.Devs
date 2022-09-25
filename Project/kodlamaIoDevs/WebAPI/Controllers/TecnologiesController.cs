@@ -1,4 +1,5 @@
-﻿using Application.Features.Tecnologies.Commands;
+﻿using Application.Features.Tecnologies.Commands.CreateTechnologies;
+using Application.Features.Tecnologies.Commands.DeleteTechnologies;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

@@ -5,10 +5,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Application.Features.Tecnologies.Commands;
 using Application.Features.Tecnologies.Dtos;
 using Application.Features.Tecnologies.Models;
 using Domain.Entities;
+using Application.Features.Tecnologies.Commands.CreateTechnologies;
 
 namespace Application.Features.Tecnologies.Profiles
 {

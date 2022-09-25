@@ -9,7 +9,7 @@ using Application.Features.Tecnologies.Dtos;
 using Application.Features.Tecnologies.Rules;
 using Application.Services.Repositories;
 
-namespace Application.Features.Tecnologies.Commands
+namespace Application.Features.Tecnologies.Commands.DeleteTechnologies
 {
     public class DeleteTechnologiesCommand : IRequest<DeletedTechnologiesDto>
     {
@@ -36,13 +36,11 @@ namespace Application.Features.Tecnologies.Commands
             {
                 await _technologiesBusinessRules.HasProgrammingLanguageTechnologyWithThisId(request.Id);
 
-                var programmingLanguageTechnologyEntity = await _technologiesRepository.GetAsync(w =>
-                    w.Id == request.Id);
-                var deletedProgrammingLanguageTechnology = await _technologiesRepository.DeleteAsync(programmingLanguageTechnologyEntity);
-                var deletedProgrammingLanguageTechnologyDto =
-                    _mapper.Map<DeletedTechnologiesDto>(deletedProgrammingLanguageTechnology);
+                var TechnologiesEntity = await _technologiesRepository.GetAsync(w => w.Id == request.Id);
+                var deletedTechnologies = await _technologiesRepository.DeleteAsync(TechnologiesEntity);
+                var deletedTechnologiesDto = _mapper.Map<DeletedTechnologiesDto>(deletedTechnologies);
 
-                return deletedProgrammingLanguageTechnologyDto;
+                return deletedTechnologiesDto;
             }
         }
     }

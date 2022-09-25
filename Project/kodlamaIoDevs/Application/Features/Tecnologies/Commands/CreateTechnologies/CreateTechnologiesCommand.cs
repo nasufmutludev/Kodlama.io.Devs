@@ -9,7 +9,7 @@ using Application.Features.Tecnologies.Dtos;
 using Application.Features.Tecnologies.Rules;
 using Application.Services.Repositories;
 
-namespace Application.Features.Tecnologies.Commands
+namespace Application.Features.Tecnologies.Commands.CreateTechnologies
 {
     public class CreateTechnologiesCommand : IRequest<CreatedTechnologiesCommandDto>
     {
