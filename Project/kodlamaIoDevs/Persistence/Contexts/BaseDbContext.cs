@@ -35,7 +35,7 @@ namespace Persistence.Contexts
                 a.ToTable("Languages").HasKey(k => k.Id);
                 a.Property(p => p.Id).HasColumnName("Id");
                 a.Property(p => p.Name).HasColumnName("Name");
-                a.HasMany(p => p.Tecnologies);
+                a.HasMany(p => p.Technologies);
             });
 
             modelBuilder.Entity<Technologies>(a =>

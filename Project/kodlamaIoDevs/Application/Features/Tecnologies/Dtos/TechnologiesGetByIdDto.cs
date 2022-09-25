@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application.Features.Tecnologies.Dtos
 {
-    public class TechnologiesListDto
+    public class TechnologiesGetByIdDto
     {
         public int Id { get; set; }
         public string Name { get; set; }
