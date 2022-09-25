@@ -21,7 +21,7 @@ namespace Persistence
                 options.UseSqlServer(
                     configuration.GetConnectionString("LanguagesConnectionString")));
             services.AddScoped<ILanguageRepository, LanguageRepository>();
-
+            services.AddScoped<ITechnologiesRepository, TecnologiesRepository>();
             return services;
         }
     }

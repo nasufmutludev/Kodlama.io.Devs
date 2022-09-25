@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Application.Features.Languages.Dtos;
 using Application.Features.Rules;
+using Application.Features.Tecnologies.Rules;
 using Application.Services.Repositories;
 using AutoMapper;
 using Domain.Entities;
@@ -31,12 +32,14 @@ namespace Application.Features.Languages.Commands.DeleteLanguage
 
             public async Task<DeleteLanguageDto> Handle(DeleteLanguageCommand request, CancellationToken cancellationToken)
             {
-                Language mappedLanguage = _mapper.Map<Language>(request);
-                Language language = await _languageRepository.GetAsync(x => x.Id == request.Id);
-                _languageBusinessRules.LanguageShouldExistWhenRequested(language);
-                Language deleteLanguage = await _languageRepository.DeleteAsync(mappedLanguage);
-                DeleteLanguageDto deleteLanguageDto = _mapper.Map<DeleteLanguageDto>(deleteLanguage);
-                return deleteLanguageDto;
+                await _languageBusinessRules.HasLanguageWithThisId(request.Id);
+                var LanguageEntity = await _languageRepository.GetAsync(w =>
+                    w.Id == request.Id);
+                var deletedLanguage = await _languageRepository.DeleteAsync(LanguageEntity);
+                var deletedLanguageDto =
+                    _mapper.Map<DeleteLanguageDto>(deletedLanguage);
+
+                return deletedLanguageDto;
             }
         }
     }

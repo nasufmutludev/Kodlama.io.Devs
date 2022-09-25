@@ -29,5 +29,21 @@ namespace Application.Features.Rules
         {
             if (language == null) throw new BusinessException("Requested language does not exists.");
         }
+
+        public async Task LanguageShouldBeExist(int id)
+        {
+            var result = await _languageRepository.GetAsync(w => w.Id == id);
+            if (result is null) throw new BusinessException($"There is no programming language with id {id}");
+        }
+
+        public async Task HasLanguageWithThisId(int languageId)
+        {
+            var result = await
+                _languageRepository.GetAsync(w => w.Id == languageId);
+
+            if (result == null)
+                throw new BusinessException(
+                    $"There is not programming language with this id {languageId}");
+        }
     }
 }

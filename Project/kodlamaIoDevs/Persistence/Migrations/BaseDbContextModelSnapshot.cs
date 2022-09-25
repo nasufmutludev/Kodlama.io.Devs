@@ -57,7 +57,7 @@ namespace Persistence.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Domain.Entities.LanguageTecnology", b =>
+            modelBuilder.Entity("Domain.Entities.Technologies", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -79,7 +79,7 @@ namespace Persistence.Migrations
 
                     b.HasIndex("LanguageId");
 
-                    b.ToTable("LanguageTecnologies", (string)null);
+                    b.ToTable("Tecnologies", (string)null);
 
                     b.HasData(
                         new
@@ -96,10 +96,10 @@ namespace Persistence.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Domain.Entities.LanguageTecnology", b =>
+            modelBuilder.Entity("Domain.Entities.Technologies", b =>
                 {
                     b.HasOne("Domain.Entities.Language", "Language")
-                        .WithMany("LanguageTecnologies")
+                        .WithMany("Tecnologies")
                         .HasForeignKey("LanguageId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -109,7 +109,7 @@ namespace Persistence.Migrations
 
             modelBuilder.Entity("Domain.Entities.Language", b =>
                 {
-                    b.Navigation("LanguageTecnologies");
+                    b.Navigation("Tecnologies");
                 });
 #pragma warning restore 612, 618
         }

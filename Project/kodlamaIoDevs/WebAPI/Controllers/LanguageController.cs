@@ -51,7 +51,7 @@ namespace WebAPI.Controllers
         public async Task<IActionResult> Delete([FromRoute] DeleteLanguageCommand deleteLanguageCommand)
         {
             DeleteLanguageDto result = await Mediator.Send(deleteLanguageCommand);
-            return Created("", result);
+            return Ok(result);
         }
     }
 }

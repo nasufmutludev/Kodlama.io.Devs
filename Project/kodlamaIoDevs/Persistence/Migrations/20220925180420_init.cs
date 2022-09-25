@@ -22,7 +22,7 @@ namespace Persistence.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "LanguageTecnologies",
+                name: "Tecnologies",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -32,9 +32,9 @@ namespace Persistence.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_LanguageTecnologies", x => x.Id);
+                    table.PrimaryKey("PK_Tecnologies", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_LanguageTecnologies_Languages_LanguageId",
+                        name: "FK_Tecnologies_Languages_LanguageId",
                         column: x => x.LanguageId,
                         principalTable: "Languages",
                         principalColumn: "Id",
@@ -57,25 +57,25 @@ namespace Persistence.Migrations
                 values: new object[] { 3, "Python" });
 
             migrationBuilder.InsertData(
-                table: "LanguageTecnologies",
+                table: "Tecnologies",
                 columns: new[] { "Id", "LanguageId", "Name" },
                 values: new object[] { 1, 1, "C#" });
 
             migrationBuilder.InsertData(
-                table: "LanguageTecnologies",
+                table: "Tecnologies",
                 columns: new[] { "Id", "LanguageId", "Name" },
                 values: new object[] { 2, 2, "Spring" });
 
             migrationBuilder.CreateIndex(
-                name: "IX_LanguageTecnologies_LanguageId",
-                table: "LanguageTecnologies",
+                name: "IX_Tecnologies_LanguageId",
+                table: "Tecnologies",
                 column: "LanguageId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "LanguageTecnologies");
+                name: "Tecnologies");
 
             migrationBuilder.DropTable(
                 name: "Languages");
